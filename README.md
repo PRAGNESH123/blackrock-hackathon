@@ -601,25 +601,10 @@ Every 30s · 10s timeout · 3 retries · 40s startup grace period
 
 ## Design Decisions & Tradeoffs
 
-**`double` vs `BigDecimal`**
-We used `double` for speed and simplicity at hackathon scale. In a true production financial system, `BigDecimal` would be used to avoid floating-point precision errors. This tradeoff is acceptable here given the scale and time constraints.
-
-**Stateless services**
-No database or cache layer — all computation is in-memory per request. This simplifies deployment and keeps the Docker image lean. For a production system with persistent user data, a database would be required.
-
-**Interface + Implementation pattern**
-All services are defined as interfaces with a single `impl`. This makes unit testing with mocks trivial and follows Spring best practices.
-
-**Multi-stage Docker build**
-Keeps the final image small by excluding Maven, JDK, and build artifacts from the runtime image. Only the JAR and JRE are present in the final container.
 
 **FlexibleLocalDateTimeDeserializer**
 Accepts both `yyyy-MM-dd HH:mm:ss` (space) and `yyyy-MM-ddTHH:mm:ss` (ISO) formats. This prevents 400 errors from minor client formatting differences and makes the API more resilient.
 
 ---
 
-## Author
 
-**Name:** {Your Name}  
-**Email:** {Your Email}  
-**Repository:** {GitHub/GitLab URL}
