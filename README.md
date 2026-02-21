@@ -164,25 +164,6 @@ logging.level.com.blackrock=INFO
 
 ## How to Run
 
-### Option 1 — Docker Compose (Recommended)
-
-```bash
-# Clone the repository
-git clone <your-repo-url>
-cd blackrock-challenge
-
-# Build and start
-docker compose up -d --build
-
-# Verify it's running
-curl http://localhost:5477/blackrock/challenge/v1/performance
-
-# Watch logs
-docker compose logs -f
-
-# Stop
-docker compose down
-```
 
 ### Option 2 — Docker Only
 
