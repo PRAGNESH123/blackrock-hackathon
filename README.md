@@ -68,8 +68,7 @@ All services are **stateless** — no database required. Every request is fully 
 |------|---------|-------------|
 | Java | 17 (LTS) | Local development |
 | Maven | 3.9+    | Building the project |
-| Docker | 24+     | Running via container |
-| Docker Compose | v2+     | Multi-service orchestration |
+
 
 ---
 
@@ -115,21 +114,21 @@ blackrock-challenge/
 │   │   │   │       ├── FilterResponse.java
 │   │   │   │       ├── ReturnsResponse.java
 │   │   │   │       └── PerformanceResponse.java
-│   │   │   ├── config/
-│   │   │   │   ├── JacksonConfig.java
-│   │   │   │   └── WebConfig.java
-│   │   │   ├── interceptor/
-│   │   │   │   └── PerformanceInterceptor.java
-│   │   │   ├── exception/
-│   │   │   │   └── GlobalExceptionHandler.java
+│   │   │   ├
+│   │   │   │   
+│   │   │   │   
+│   │   │   ├
+│   │   │   │   
+│   │   │   ├
+│   │   │   │   
 │   │   │   └── util/
 │   │   │       ├── TaxCalculator.java
-│   │   │       └── FlexibleLocalDateTimeDeserializer.java
+│   │   │       
 │   │   └── resources/
 │   │       ├── application.properties
-│   │       └── application-prod.properties
+│   │       
 ├── test/
-│   └── (see Testing section)
+│  
 ├── Dockerfile
 ├── compose.yaml
 └── README.md
