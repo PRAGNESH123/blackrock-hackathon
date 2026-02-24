@@ -53,7 +53,7 @@ This system implements an **automated micro-savings engine** for retirement plan
                   │
 ┌─────────────────▼───────────────────────────────────┐
 │               Utility Layer                          │
-│  TaxCalculator  │  FlexibleDateDeserializer         │
+│  TaxCalculator  │       
 │  GlobalExceptionHandler                             │
 └─────────────────────────────────────────────────────┘
 ```
