@@ -147,40 +147,13 @@ spring.jackson.serialization.write-dates-as-timestamps=false
 spring.jackson.deserialization.fail-on-unknown-properties=false
 ```
 
-### `application-prod.properties` (used inside Docker)
-
-```properties
-server.port=5477
-spring.profiles.active=prod
-spring.jackson.date-format=yyyy-MM-dd HH:mm:ss
-spring.jackson.serialization.write-dates-as-timestamps=false
-logging.level.root=WARN
-logging.level.com.blackrock=INFO
-```
-
-
----
-
 ## How to Run
 
 
 ### Option 2 — Docker Only
 
-```bash
-# Build image
-docker build -t blk-hacking-ind-{name-lastname} .
 
-# Run container
-docker run -d \
-  -p 5477:5477 \
-  --name blk-hacking-ind-{name-lastname} \
-  blk-hacking-ind-{name-lastname}
-
-# Check logs
-docker logs -f blk-hacking-ind-{name-lastname}
-```
-
-### Option 3 — Local Development
+## — Local Development
 
 ```bash
 # Build
